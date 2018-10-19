@@ -1,92 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<!-- Bootstrap.css -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>
-        JobDev login page
-    </title>
-   
-
-    <!-- Bootstrap Core CSS -->
-    <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="main.css " rel="stylesheet">
-    <style>
-        body {
-        background-image: url('edu2.jpg');
-        height: auto;
-        background-size:100% 250%;
-        opacity:1;
-        background-repeat:no-repeat;
-        background-position:fixed;
-        filter:alpha(opacity=100);
-        z-index: -1;
-    }
-
-    </style>
-    <script>
-   
-    </script>
-
-
-</head>
-
-<body>
-
-    <div class="container">
-
-        <h1 class="thick-heading">
-       
-      </h1>
-
-        <!-- First Featurette -->
-        <div class="featurette" id="about">
-            <!------------------------code---------------start---------------->
-            <div class="container">
-                <div class="card card-container">
-                    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-                    <img id="profile-img" class="profile-img-card" src="logo.PNG" />
-                    <p id="profile-name" class="profile-name-card"></p>
-                    <form class="form-signin" method="POST", action = "signup.php" name = "signup">
-                        <span id="reauth-email" class="reauth-email"></span>
-                        <input type="text" id="inputEmail" class="form-control" placeholder="Email" name="Email" required autofocus>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name = "Password" required>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm password" name = "Confirm_Password" required autofocus>
-                        <div>
-                            
-                            <label>
-                                <b class = 'urll'>Sign Up with:</b>
-                                <a href ='' ><b class = 'url'><img src= 'fb.png' style='width:2em; background-color:  darkslateblue;'></b></a>
-                                <a href =''><b class = 'url'><img src = 'google.png' style='width:2em; background-color: darkslateblue;'></b></a>
-                            </label>
-                            
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block btn-signin" name="signup" type="submit">Sign Up</button>
-                    </form name = "signup">
-                    <!-- /form -->
-                
-                </div>
-                
-                
-                <!-- /card-container -->
-            </div>
-            <!-- /container -->
-            <!----Code------end----------------------------------->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>DevMinds</title>
+  </head>
+  <body class="text-center">
+    <div class="content">
+      <form class="form-signup card" action="signup.php" method="POST">
+        <div class="card-body">
+          <img class="mb-4" src="logo.PNG" alt="" width="72" height="72">
+          <h1 class="h4 mb-3 font-weight-normal">Join us to bootstrap your career!</h1>
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="Email">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="Password">
+          <label for="inputPasswordConfirmation" class="sr-only">Confirm Password</label>
+          <input type="password" id="inputPasswordConfirmation" class="form-control" placeholder="Confirm Password" required name="PasswordConfirmation">
+          <ul id="socialSignupLinks">
+            <li id="facebookSignup">
+              <a href="#"><img src="fb.png"></a>
+            </li>
+          </ul>
         </div>
-        <!-- /.container -->
-        <!--<a href="https://icons8.com">Icon pack by Icons8</a> -->
-</body>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="signup">Sign up</button>
+      </form>
+      <p class="mt-5 mb-3 text-muted">&copy; DevMinds, 2018.</p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -1,0 +1,79 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.content {
+  width: 100%;
+  max-width: 330px;
+  margin: auto;
+}
+.form-signup {
+  /* padding: 15px; */
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, .15);
+  border-top: 3px solid #007bff;
+  overflow: hidden;
+}
+.form-signup img {
+  justify-self: center;
+}
+.form-signup .checkbox {
+  font-weight: 400;
+}
+.form-signup .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signup .form-control:focus {
+  z-index: 2;
+}
+.form-signup input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#inputPassword {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#inputPasswordConfirmation {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signup .btn-block {
+  border-radius: 0;
+}
+
+#socialSignupLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#socialSignupLinks li {
+  margin: 0;
+  marginRight: 1em;
+}
+#socialSignupLinks li > a > img {
+  width: 32px;
+  height: 32px;
+}
