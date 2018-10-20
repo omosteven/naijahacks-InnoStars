@@ -12,11 +12,20 @@ a:hover {
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:focus,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
+}
+
+/* Custom primary outline button */
+.btn-outline-secondary {
+  border-color: #333;
+  text-shadow: none;
+  color: #fff
 }
 
 
