@@ -40,8 +40,8 @@ body {
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
+  /* display: -ms-flexbox;
+  display: flex; */
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
@@ -49,6 +49,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 
 .cover-container {
@@ -104,6 +106,7 @@ body {
  */
 .cover {
   padding: 0 1.5rem;
+  text-align: left;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -115,6 +118,85 @@ body {
   height: 16px;
 }
 
+/*
+ * Content
+ */
+.content {
+  background-color: #efefef;
+  padding: 1rem;
+  width: 100%;
+  /* margin: 0 auto; */
+  text-shadow: none;
+  color: #3d3d3d;
+  min-height: 100vh;
+  display: flex;
+}
+.content > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  min-height: 325px;
+  margin: 1rem;
+  border-radius: 15px;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  background-color: white;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+  overflow: hidden;
+}
+.product-info:nth-child(even) {
+  min-height: 375px;
+}
+.product-info .product-info-image {
+  order: 1;
+  background-color: #333;
+}
+.product-info:nth-child(even) .product-info-image {
+  background-color: #007bff;
+}
+.product-info .product-info-text {
+  order: 2;
+  border-bottom: 3px solid #333;
+  text-align: center;
+  padding: 1rem;
+  align-self: center;
+  display: flex;
+  overflow: hidden;
+}
+.product-info:nth-child(even) .product-info-text {
+  border-bottom-color: #007bff;
+}
+
+.product-info .product-info-text p {
+  margin: auto 0;
+}
+
+/* @media (min-width: 576px) {
+  .product-info {
+    flex-direction: row;
+    max-width: 500px;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: 15px;
+    border-left: 3px solid #333;
+  }
+  .product-info .product-info-image {
+    order: 2;
+  }
+  .product-info .product-info-text {
+    border-bottom: none;
+    order: 1;
+    margin: auto 0;
+  }
+} */
 
 /*
  * Footer

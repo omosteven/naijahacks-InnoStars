@@ -13,8 +13,11 @@
     <!-- Bootstrap core CSS -->
     <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Slick carousel css -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Custom styles for this page -->
     <link href="css/cover.css" rel="stylesheet">
+
   </head>
 
   <body class="text-center">
@@ -38,12 +41,16 @@
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">DevMinds</h1>
         <p class="lead">Hey there! Your future is quite important! Why don't you let us help you craft the perfect one?</p>
         <p>Ready?</p>
-        <p class="lead">
-          <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Let's go! <img class="emoji" src="img/emoji/fire.png"></a>
-        </p>
+        <div class="lead row">
+          <div class="col-12 col-sm-4 mb-3 mb-sm-0">
+            <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Let's go! <i class="fas fa-fire"></i></a>
+          </div>
+          <div class="col-12 col-sm-8">
+            <a href="#moreDetails" class="btn btn-lg btn-outline-secondary" id="learnMoreButton" role="button">Wanna know more? <i class="fas fa-arrow-down"></i></a>
+          </div>
+        </div>
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -52,13 +59,45 @@
         </div>
       </footer>
     </div>
+    <section role="contentinfo" class="inner content" id="moreDetails">
+      <div class="container">
+        <div class="row product-info">
+          <div class="col product-info-image"></div>
+          <div class="col product-info-text">
+            <p>Est id tempor aute culpa nulla labore ipsum enim duis excepteur do reprehenderit aliquip.</p>
+          </div>
+        </div>
+        <div class="row product-info">
+          <div class="col product-info-image"></div>
+          <div class="col product-info-text">
+            <p>Ut sunt elit est commodo labore duis esse exercitation sunt minim ut.</p>
+          </div>
+        </div>
+        <div class="row product-info">
+          <div class="col product-info-image"></div>
+          <div class="col product-info-text">
+            <p>Ad irure est excepteur sit aliqua eu sunt adipisicing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/vendor/jquery-slim.min.js"></script>
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
     <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave'); setTimeout(function () {  $('#loader').detach() }, 2000) })</script>
+    <script>
+      $("#learnMoreButton").click(function (event) {
+        event.preventDefault()
+        $('html, body').animate({
+          scrollTop: $("#moreDetails").offset().top
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
