@@ -22,11 +22,12 @@ if ($Mysqli_database) {
             echo "<script>
                    alert('Password and Confirm Password did not math');
                   </script>";
-                  header("Location:signup.html");
+                  include("signup.html");
                   
         }
         }
     } elseif(isset($_POST['login'])) { //for logging in
+        
        //if($_POST['LOGIN'] == 'SIGNIN') 
        {
         #echo $_POST['USERNAME'];
@@ -40,13 +41,13 @@ if ($Mysqli_database) {
     
             session_start(); // TO START A SESSION FOR LOGGED IN USER
             $_SESSION['Email'] = $Email;
-            header("Location:home.php");
+            header("Location:index.html");
             
         } else {
             echo "<script>
                    alert('Incorrect Email or Password');
                   </script>";
-                  header("Location:login.html");      
+                echo incude("login.html");      
                 }
        }
     } else {
@@ -54,6 +55,6 @@ if ($Mysqli_database) {
     }
 } else {
 //include('critedbottominfo.php');
-echo 'go';
+echo 'Error';
 }
 ?>
