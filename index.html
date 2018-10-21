@@ -13,8 +13,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Slick carousel css -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Overrides CSS -->
+    <link href="css/overrides.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="css/cover.css" rel="stylesheet">
 
@@ -29,35 +29,112 @@
         <div></div>
       </div>
     </div>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">DevMinds</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="ml-3 btn btn-outline-secondary" role="button" href="login.html">Login</a>
-          </nav>
+    <nav class="navbar navbar-dark bg-dark nav-devminds-float-away nav-devminds-transparent">
+      <div class="container">
+        <a class="navbar-brand" href="#">Devminds</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
         </div>
-      </header>
+      </div>
+    </nav>
+    <!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
       <main role="main" class="inner cover">
-        <p class="lead">Hey there! Your future is quite important! Why don't you let us help you craft the perfect one?</p>
-        <p>Ready?</p>
-        <div class="lead row">
-          <div class="col-12 col-sm-4 mb-3 mb-sm-0">
-            <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Let's go! <i class="fas fa-fire"></i></a>
-          </div>
-          <div class="col-12 col-sm-8">
-            <a href="#moreDetails" class="btn btn-lg btn-outline-secondary" id="learnMoreButton" role="button">Wanna know more? <i class="fas fa-arrow-down"></i></a>
-          </div>
-        </div>
+        
       </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>&copy; DevMinds, 2018.</p>
+    </div> -->
+    <div id="welcomeCarousel" class="carousel slide carousel-fade w-100 h-100">
+      <div class="carousel-inner w-100 h-100">
+        <div class="carousel-item w-100 h-100 active">
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption text-left appear">
+              <h1>Ensure a bright future</h1>
+              <p>Your future is quite important! Why don't you let us help you craft the perfect one?</p>
+              <p>Ready?</p>
+              <div class="row">
+                <div class="col-12 col-lg-2 mb-3 mb-lg-0">
+                  <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Let's go! <i class="fas fa-fire"></i></a>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <a href="#" data-target="#welcomeCarousel" data-slide-to="1" class="btn btn-lg btn-outline-secondary" role="button">Wanna know more? <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
+        <div class="carousel-item w-100 h-100">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container mb-5">
+            <div class="carousel-caption appear text-left">
+              <h1>Find a suitable career</h1>
+              <p>Your career is a major aspect of your life as it defines who you are and the cool stuff you can do to make the world better!</p>
+              <p>Convinced?</p>
+              <div class="row">
+                <div class="col-12 col-lg-2 mb-3 mb-sm-0">
+                  <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Go go go! <i class="fas fa-fire"></i></a>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <a href="#" data-target="#welcomeCarousel" data-slide-to="2" class="btn btn-lg btn-outline-secondary" role="button">Not sure yet? <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item  w-100 h-100">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption text-right appear">
+              <h1>Plan out your life in the best way possible</h1>
+              <p>Life can't get you down if you've got the plan!</p>
+              <p>You in?</p>
+              <div class="row">
+                <div class="col-12 col-lg-10 mb-3 mb-sm-0 text-right">
+                  <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Alright! <i class="fas fa-fire"></i></a>
+                </div>
+                <div class="col-12 col-lg-2 text-right">
+                  <a href="#moreDetails" class="btn btn-lg btn-outline-secondary" role="button" id="learnMoreButton">Still can't decide? <i class="fas fa-arrow-down"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <a class="carousel-control-prev" href="#welcomeCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#welcomeCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
     </div>
     <section role="contentinfo" class="inner content" id="moreDetails">
       <div class="container">
@@ -88,9 +165,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
     <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave'); setTimeout(function () {  $('#loader').detach() }, 2000) })</script>
+    <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
     <script>
       $("#learnMoreButton").click(function (event) {
         event.preventDefault()

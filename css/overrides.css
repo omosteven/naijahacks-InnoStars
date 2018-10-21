@@ -1,0 +1,70 @@
+.bg-devminds {
+  background: black;
+}
+.nav-devminds-float-away {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.nav-devminds-transparent {
+  background: transparent !important;
+}
+.navbar {
+  text-shadow: none;
+}
+.navbar-brand {
+  text-transform: lowercase;
+  font-size: 32px;
+  letter-spacing: .15rem;
+}
+
+.nav-devminds-transparent .navbar-brand {
+  background: linear-gradient(to right, rgba(140, 30, 200, .8), rgb(100, 50, 230));
+  background-clip: text;
+  color: transparent !important;
+  -webkit-background-clip: text;
+}
+.navbar-toggler {
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  justify-content: center;
+}
+.navbar-toggler > span {
+  margin-bottom: .5rem;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgba(140, 30, 200, .8), rgb(100, 50, 230));
+  transition: width .5s, margin-left .5s;
+  width: 65%;
+  margin-left: 35%;
+}
+.navbar-toggler >span:nth-child(2) {
+  width: 90%;
+  background: linear-gradient(to right, rgba(255, 30, 50, .8), rgb(170, 30, 100));
+  margin-left: 0;
+}
+.navbar-toggler > span:nth-child(3) {
+  width: 80%;
+  margin-bottom: 0;
+  background: linear-gradient(to right, rgba(30, 200, 140, .8), rgb(50, 130, 150));
+  margin-left: 20%;
+}
+
+.navbar-toggler.collapsed > span {
+  width: 80%;
+  margin-left: 0;
+}
+.navbar-toggler.collapsed > span:nth-child(2) {
+  width: 65%;
+  margin-left: 0;
+}
+.navbar-toggler.collapsed >span:nth-child(3) {
+  width: 90%;
+  margin-left: 0;
+}

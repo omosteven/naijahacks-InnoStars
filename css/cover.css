@@ -15,7 +15,7 @@ a:hover {
 .btn-secondary:focus,
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-  color: #333;
+  color: rgb(100, 50, 230);
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
@@ -107,6 +107,7 @@ body {
 .cover {
   padding: 0 1.5rem;
   text-align: left;
+  margin: auto 0;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -203,4 +204,19 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+.appear {
+  animation: appear .3s ease-out forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
