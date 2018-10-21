@@ -205,7 +205,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
-    <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave'); setTimeout(function () {  $('#loader').detach() }, 2000) })</script>
+    <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave').one('transitionend', function () { $(this).detach(); }) })</script>
     <script src="js/navbar.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
     <script>
