@@ -29,8 +29,8 @@
 }
 .navbar-toggler {
   border: none !important;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   width: 48px;
   height: 48px;
   padding: 0;
@@ -43,6 +43,7 @@
   background: linear-gradient(to right, rgba(140, 30, 200, .8), rgb(100, 50, 230));
   transition: width .5s, margin-left .5s;
   width: 65%;
+  display: block;
   margin-left: 35%;
 }
 .navbar-toggler >span:nth-child(2) {
@@ -58,7 +59,7 @@
 }
 
 .navbar-toggler.collapsed > span {
-  width: 38.4px; /* chrome doesn't display them unless one of them has a specific width?! */
+  width: 80%; /* chrome doesn't display them unless one of them has a specific width?! */
   margin-left: 0;
 }
 .navbar-toggler.collapsed > span:nth-child(2) {
@@ -138,4 +139,13 @@ button.overlay-navigation-close span:nth-child(2) {
   /* display: inline-block; */
   max-width: 100px;
   margin: .5rem auto;
+}
+
+.overlay-navigation-bottom-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 550px;
+  transform: translateX(-50%);
 }
