@@ -128,22 +128,72 @@
     </div>
     <section role="contentinfo" class="inner content" id="moreDetails">
       <div class="container">
-        <div class="row product-info">
+        <!-- <div class="row product-info">
           <div class="col product-info-image"></div>
           <div class="col product-info-text">
-            <p>Est id tempor aute culpa nulla labore ipsum enim duis excepteur do reprehenderit aliquip.</p>
+            <h5>Career Advice</h5>
+            <p>We help you choose the coolest and most practical careers for your interests.</p>
           </div>
         </div>
         <div class="row product-info">
           <div class="col product-info-image"></div>
           <div class="col product-info-text">
-            <p>Ut sunt elit est commodo labore duis esse exercitation sunt minim ut.</p>
+            <h5>Mentors</h5>
+            <p>You don't have to fumble around in the dark, let people who've done it before help you out.</p>
           </div>
         </div>
         <div class="row product-info">
           <div class="col product-info-image"></div>
           <div class="col product-info-text">
-            <p>Ad irure est excepteur sit aliqua eu sunt adipisicing.</p>
+            <h5>Goal Tracking</h5>
+            <p>It can be hard, not knowing if you're making any progress or not. Fear not! We'll help you set achievable goals and get you pumped!</p>
+          </div>
+        </div>
+        <div class="row product-info">
+          <div class="col product-info-image"></div>
+          <div class="col product-info-text">
+            <h5>Socialization</h5>
+            <p>Get to know other people in your career path and discuss about amazing things.</p>
+          </div>
+        </div> -->
+        <div class="row d-flex flex-column flex-md-row productInfos">
+          <div class="product-info-items" data-active="0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item product-info-item active" data-to="0">
+                <span class="product-info-item-icon"></span>
+                <span class="product-info-item-text d-none d-md-inline">Career Advice</span>
+              </li>
+              <li class="list-group-item product-info-item" data-to="1">
+                <span class="product-info-item-icon"></span>
+                <span class="product-info-item-text d-none d-md-inline"></span>
+              </li>
+              <li class="list-group-item product-info-item" data-to="2">
+                <span class="product-info-item-icon"></span>
+                <span class="product-info-item-text d-none d-md-inline"></span>
+              </li>
+              <li class="list-group-item product-info-item" data-to="3">
+                <span class="product-info-item-icon"></span>
+                <span class="product-info-item-text d-none d-md-inline"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="product-info-descriptions" data-active="0">
+            <div class="product-info-description active">
+              <h5>Career Advice</h5>
+              <p>We help you choose the coolest and most practical careers for your interests.</p>
+            </div>
+            <div class="product-info-description">
+              <h5>Mentors</h5>
+              <p>You don't have to fumble around in the dark, let people who've done it before help you out.</p>
+            </div>
+            <div class="product-info-description">
+              <h5>Goal Tracking</h5>
+              <p>It can be hard, not knowing if you're making any progress or not. Fear not! We'll help you set achievable goals and get you pumped!</p>
+            </div>
+            <div class="product-info-description">
+              <h5>Socialization</h5>
+              <p>Get to know other people in your career path and discuss about amazing things.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -159,12 +209,38 @@
     <script src="js/navbar.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
     <script>
+      var appearId = setInterval(function () {
+        if ($('html, body').scrollTop() >= $("#welcomeCarousel").height() / 3) {
+          $('.productInfos').addClass('appear').removeClass('productInfos');
+          clearInterval(appearId);
+        }
+      }, 100);
+      var $productInfoItems = $('.product-info-items');
+      var $productInfoDescriptions = $('.product-info-descriptions');
+      var activeProductInfoItem = null;
       $("#learnMoreButton").click(function (event) {
         event.preventDefault()
         $('html, body').animate({
           scrollTop: $("#moreDetails").offset().top
         }, 1000);
       });
+      $(".product-info-item").on('click', function () {
+        if (this === activeProductInfoItem) return
+        else {
+          var toDesc = $(this).data('to');
+          var toDescNode = $('.product-info-description')[toDesc];
+          if (toDescNode) {
+            $productInfoItems.data('active', toDesc);
+            $productInfoDescriptions.data('active', toDesc)
+            $('.product-info-item.active').removeClass('active');
+            $(this).addClass('active');
+            $('.product-info-description.active').removeClass('active').addClass('leave').one('animationend', function () {
+              $(this).removeClass('leave');
+              $(toDescNode).addClass('active');
+            });
+          }
+        }
+      })
     </script>
   </body>
 </html>
