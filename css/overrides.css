@@ -125,7 +125,7 @@ button.overlay-navigation-close span:nth-child(2) {
 }
 .overlay-navigation-wrapper .overlay-navigation-content {
   position: relative;
-  top: 25%;
+  top: 10%;
   width: 100%;
   text-align: center;
   font-size: 48px;
