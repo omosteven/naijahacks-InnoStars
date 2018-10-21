@@ -21,10 +21,11 @@
 }
 
 .nav-devminds-transparent .navbar-brand {
-  background: linear-gradient(to right, rgba(140, 30, 200, .8), rgb(100, 50, 230));
+  /* background: linear-gradient(to right, rgba(140, 30, 200, .8), rgb(100, 50, 230));
   background-clip: text;
   color: transparent !important;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
+  color: white;
 }
 .navbar-toggler {
   border: none !important;
