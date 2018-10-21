@@ -32,38 +32,23 @@
     <nav class="navbar navbar-dark bg-dark nav-devminds-float-away nav-devminds-transparent">
       <div class="container">
         <a class="navbar-brand" href="#">Devminds</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="overlayNav" data-target="#mainOverlayNav" aria-controls="mainOverlayNav" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
-  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
+    <div class="overlay-navigation-wrapper" id="mainOverlayNav" role="navigation">
+      <div class="overlay-navigation-content">
+          <button class="overlay-navigation-close">
+            <span></span>
+            <span></span>
+          </button>
+          <a href="#">Home</a> <span class="sr-only">(active)</span></li>
+          <a href="login.html" class="btn btn-lg btn-outline-secondary">Login</a>
+      </div>
+    </div>
     <!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
       <main role="main" class="inner cover">
@@ -98,7 +83,7 @@
               <p>Your career is a major aspect of your life as it defines who you are and the cool stuff you can do to make the world better!</p>
               <p>Convinced?</p>
               <div class="row">
-                <div class="col-12 col-lg-2 mb-3 mb-sm-0">
+                <div class="col-12 col-lg-2 mb-3 mb-lg-0">
                   <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Go go go! <i class="fas fa-fire"></i></a>
                 </div>
                 <div class="col-12 col-lg-8">
@@ -116,7 +101,7 @@
               <p>Life can't get you down if you've got the plan!</p>
               <p>You in?</p>
               <div class="row">
-                <div class="col-12 col-lg-10 mb-3 mb-sm-0 text-right">
+                <div class="col-12 col-lg-10 mb-3 mb-lg-0 text-right">
                   <a href="signup.html" class="btn btn-lg btn-secondary" role="button">Alright! <i class="fas fa-fire"></i></a>
                 </div>
                 <div class="col-12 col-lg-2 text-right">
@@ -166,6 +151,7 @@
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave'); setTimeout(function () {  $('#loader').detach() }, 2000) })</script>
+    <script src="js/navbar.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
     <script>
       $("#learnMoreButton").click(function (event) {

@@ -58,7 +58,7 @@
 }
 
 .navbar-toggler.collapsed > span {
-  width: 80%;
+  width: 38.4px; /* chrome doesn't display them unless one of them has a specific width?! */
   margin-left: 0;
 }
 .navbar-toggler.collapsed > span:nth-child(2) {
@@ -68,4 +68,74 @@
 .navbar-toggler.collapsed >span:nth-child(3) {
   width: 90%;
   margin-left: 0;
+}
+
+.overlay-navigation-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlay-navigation-wrapper.show {
+  width: 100vw;
+}
+
+.overlay-navigation-close {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+}
+
+button.overlay-navigation-close span {
+  height: 3px;
+  border-radius: 5px !important;
+  background: linear-gradient(to right, rgba(140, 30, 200, .8), rgb(100, 50, 230));
+  width: 48px;
+  margin-bottom: 10px;
+  transform-origin: 50% 10%;
+  transition: transform .5s ease-out;
+}
+button.overlay-navigation-close span:nth-child(2) {
+  transform-origin: 10% 50%;
+  background: linear-gradient(to right,rgb(100, 50, 230), rgba(140, 30, 200, .8));
+}
+
+.overlay-navigation-wrapper.show button.overlay-navigation-close span {
+  transform: rotate(45deg);
+}
+.overlay-navigation-wrapper.show button.overlay-navigation-close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.overlay-navigation-wrapper .overlay-navigation-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+}
+
+.overlay-navigation-content a {
+  display: block;
+  margin: .5rem auto;
+}
+.overlay-navigation-content .btn {
+  /* display: inline-block; */
+  max-width: 100px;
+  margin: .5rem auto;
 }
