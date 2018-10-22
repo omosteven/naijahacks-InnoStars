@@ -1,0 +1,36 @@
+.card-avatar {
+  position: relative;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  top: -50%;
+  transform: translate(-50%, -50%);
+  background-color: #efefef;
+  border-radius: 50%;
+}
+.card-avatar img {
+  width: 128px;
+  height: 128px;
+  border-radius: 64px;
+  overflow: hidden;
+}
+
+.upload-button {
+  position: absolute;
+  top: 60px;
+  right: -5px;
+  font-size: 1.2rem;
+  /* color: #fff; */
+}
+
+.avatar-upload {
+  display: none !important;
+}
+
+.profile.container {
+  margin-top: 70px;
+}
+
+.profile-card .card-body:nth-child(2) {
+  margin-top: -50px;
+}
