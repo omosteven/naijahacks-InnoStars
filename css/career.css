@@ -8,32 +8,48 @@ body {
 
 #careerHighlights .list-group-item.active {
   border: none;
-  border-left: 10px solid #007bff;
   background-color: white;
   color: #495057;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
 }
-
-#careerHighlights .list-group-item.active:nth-child(2) {
-  border-left: 10px solid rgb(112, 48, 238);
+#careerHighlights .list-group-item {
+  border-left: 3px solid #007bff;
+}
+#careerHighlights .list-group-item:nth-child(2) {
+  border-left: 3px solid rgb(112, 48, 238);
 }
 
-#careerHighlights .list-group-item.active:nth-child(2) {
-  border-left: 10px solid rgb(170, 30, 100);
+#careerHighlights .list-group-item:nth-child(2) {
+  border-left: 3px solid rgb(170, 30, 100);
 }
-#careerHighlights .list-group-item.active:nth-child(3) {
-  border-left: 10px solid rgba(30, 200, 140, .8);
+#careerHighlights .list-group-item:nth-child(3) {
+  border-left: 3px solid rgba(30, 200, 140, .8);
 }
 
 #careerInfoCard {
   transition: all .5s ease-out;
 }
+
+#careerInfoCard.float .card-body:last-child {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* left: calc((100vh - 960px) / 2); */
+  width: 100vw;
+  background-color: white;
+}
+
 @media screen and (min-width: 992px) {
   #careerInfoCard.float {
     position: fixed;
     top: 0;
     /* left: calc((100vh - 960px) / 2); */
     width: 250px;
+  }
+  #careerInfoCard.float .card-body:last-child {
+    position: static;
+    width: 100%;
+    background-color: transparent;
   }
   #careerInfoCard.condensed .career-short-desc {
     display: none;
