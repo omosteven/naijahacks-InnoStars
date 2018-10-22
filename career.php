@@ -25,7 +25,7 @@ if (!isset($_GET['career'])) {
 
   </head>
 
-  <body data-spy="scroll" data-target="#careerHighlights" data-offset="0">
+  <body>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">Devminds</a>
@@ -85,27 +85,22 @@ if (!isset($_GET['career'])) {
               <h6 class="card-subtitle mb-2 text-muted">What kind of ride are you in for?</h6>
             </div>
             <div class="list-group list-group-flush" id="careerHighlights">
-              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight1" id="careerHighlight1">
+              <li class="list-group-item d-flex flex-column w-100">
                 <h5>Deep dives into computers and what they are.</h5>
                 <p>You'll go beyond the surface of what a computer is and go down to the awesome nitty gritty details.</p>
-                <p>You won't just be using computers but also studying how they work, what makes them tick. What limitations do they face? How do they surpass those limitations?</p>
-                <p>Ex pariatur et id eu cillum veniam ut mollit aliquip sunt consequat. Ut mollit qui cillum ut velit nisi. Et deserunt incididunt elit dolore eu voluptate ut nisi enim commodo aliquip laboris. Qui ea sint quis est consequat ea amet proident id. Eu aliqua pariatur excepteur ex culpa commodo aute. Pariatur consequat dolore laborum ea commodo aliquip anim non enim ipsum esse ad ea.</p>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight2" id="careerHighlight2">
+              </li>
+              <li class="list-group-item d-flex flex-column w-100">
                 <h5>Lorem</h5>
-                <p>Proident nostrud consectetur aliquip eu. Adipisicing sunt sunt veniam sint consectetur velit est. In et do veniam adipisicing excepteur dolor exercitation nulla. Eu magna aliqua ipsum sunt commodo Lorem do in consequat aliqua. Duis aliquip ullamco amet occaecat nisi duis adipisicing aliqua nulla adipisicing ea proident duis. Ea officia ut est mollit sit ut. Consectetur duis aliqua labore et duis incididunt et et esse commodo et dolore aute.</p>
-                <p>Aliqua irure occaecat aliquip quis. Nostrud aliquip duis id eiusmod magna pariatur labore ipsum elit ex duis. Cupidatat occaecat commodo cillum nisi sit voluptate ipsum consequat qui.</p>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight3" id="careerHighlight3">
+                <p>Placeholder placeholder placeholder</p>
+              </li>
+              <li class="list-group-item d-flex flex-column w-100">
                 <h5>Lorem</h5>
-                <p>Proident nostrud consectetur aliquip eu. Adipisicing sunt sunt veniam sint consectetur velit est. In et do veniam adipisicing excepteur dolor exercitation nulla. Eu magna aliqua ipsum sunt commodo Lorem do in consequat aliqua. Duis aliquip ullamco amet occaecat nisi duis adipisicing aliqua nulla adipisicing ea proident duis. Ea officia ut est mollit sit ut. Consectetur duis aliqua labore et duis incididunt et et esse commodo et dolore aute.</p>
-                <p>Aliqua irure occaecat aliquip quis. Nostrud aliquip duis id eiusmod magna pariatur labore ipsum elit ex duis. Cupidatat occaecat commodo cillum nisi sit voluptate ipsum consequat qui.</p>
-              </a>
-              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight4" id="careerHighlight4">
+                <p>Placeholder placeholder placeholder</p>
+              </li>
+              <li class="list-group-item d-flex flex-column w-100">
                 <h5>Lorem</h5>
-                <p>Proident nostrud consectetur aliquip eu. Adipisicing sunt sunt veniam sint consectetur velit est. In et do veniam adipisicing excepteur dolor exercitation nulla. Eu magna aliqua ipsum sunt commodo Lorem do in consequat aliqua. Duis aliquip ullamco amet occaecat nisi duis adipisicing aliqua nulla adipisicing ea proident duis. Ea officia ut est mollit sit ut. Consectetur duis aliqua labore et duis incididunt et et esse commodo et dolore aute.</p>
-                <p>Aliqua irure occaecat aliquip quis. Nostrud aliquip duis id eiusmod magna pariatur labore ipsum elit ex duis. Cupidatat occaecat commodo cillum nisi sit voluptate ipsum consequat qui.</p>
-              </a>
+                <p>Placholder placeholder placeholder</p>
+              </li>
             </div>
           </div>
         </div>
