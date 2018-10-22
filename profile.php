@@ -19,9 +19,9 @@ $hometowns = array_map(function ($state) {
 }, $statesJSON);
 $hometowns = array_flatten($hometowns);
 sort($hometowns);
-$levelsOfEducation = array('Primary School', 'Secondary School', 'University / College', 'Polytechnic', 'Postgraduate', 'Undergraduate', 'Non-Educative', 'Other');
+$levelsOfEducation = array('Primary School', 'Secondary School', 'Undergraduate');
 $skills = array("Writing", "Handwork", "Sports", "Cooking", "Leadership", "Music", "Organization", "Analytical Thinking", "Programming", "Dancing", "Drawing&Artwork", "Talking", "Fighting/Defense", "Teamwork");
-$subjects = array("Mathematics", "English Language", "Chemistry", "Physics", "Biology", "Social Science", "Astrology");
+$subjects = array("Mathematics", "English Language", "Chemistry", "Physics", "Biology", "Social Science", "Astrology", "Economics", "Agricultural Science", "Civic Education", "Politics");
 $profilePicture = isset($_COOKIE['profilePicture']) ? $_COOKIE['profilePicture'] : '';
 // HARD CODE ALL THE THINGS!!!
 $completedProfile = false;
@@ -94,7 +94,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
     <?php if(!$completedProfile && !isset($_POST['completeProfile'])): ?>
     <div class="container profile">
       <div class="row">
-        <div class="col-12 col-md-8 offset-md-2">
+        <div class="col-12 col-md-10 offset-md-1">
           <form class="card profile-card" method="POST" enctype="multipart/form-data">
             <div class="card-avatar">
               <img src="" />
@@ -105,12 +105,15 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
               <h5 class="card-title">Complete Your Profile</h5>
               <div class="row mb-3">
                 <div class="col-12 col-sm-4 mb-3 mb-sm-0">
-                  <input type="text" class="form-control" placeholder="First name" name="firstName">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" placeholder="Temitope" name="firstName">
                 </div>
                 <div class="col-12 col-sm-4 mb-3 mb-sm-0">
-                  <input type="text" class="form-control" placeholder="Last name" name="lastName">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Umar" name="lastName">
                 </div>
                 <div class="col-12 col-sm-4">
+                  <label for="gender">Gender</label>
                   <select class="form-control" name="gender">
                     <option disabled>Choose a gender</option>
                     <option>Male</option>
@@ -119,11 +122,11 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
                 </div>
               </div>
               <div class="row mb-3">
-                <div class="col-12 col-sm-4 mb-3 mb-sm-0">
+                <div class="col-12 col-sm-3 mb-3 mb-sm-0">
                   <label for="dateOfBirth">Date of Birth</label>
                   <input type="date" name="dateOfBirth" required class="form-control" />
                 </div>
-                <div class="col-12 col-sm-4 mb-3 mb-sm-0">
+                <div class="col-12 col-sm-3 mb-3 mb-sm-0">
                   <label for="statesDropdown">State of Residence</label>
                   <select class="form-control" id="statesDropdown" name="stateOfResidence">
                     <option disabled>Choose your state of residence</option>
@@ -132,7 +135,16 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
                     <?php } ?>
                   </select>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-3 mb-3 mb-sm-0">
+                  <label for="originStatesDropdown">State of Origin</label>
+                  <select class="form-control" id="originStatesDropdown" name="stateOfOrigin">
+                    <option disabled>Choose your state of origin</option>
+                    <?php foreach($states as $state) { ?>
+                      <option><?php echo $state; ?></option>
+                    <?php } ?>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-3">
                   <label for="hometownDropdown">Hometown</label>
                   <select class="form-control" id="hometownDropdown" name="hometown">
                     <option disabled>Choose your hometown</option>
@@ -145,17 +157,18 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
               <div class="row mb-3">
                 <div class="col-12">
                   <label for="skills">Skills/Talents/Hobbies</label>
-                  <select class="form-control" multiple required name="skills">
-                    <option disabled>Choose whatever skills you feel you excel at</option>
-                    <?php foreach($skills as $skill) { ?>
-                      <option><?php echo $skill; ?></option>
-                    <?php } ?>
-                  </select>
+                  <small class="text-muted form-text">Choose whatever skills you feel you excel at</small>
+                  <?php foreach($skills as $index => $skill) { ?>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="skillCheck<?= $index ?>" name="skills">
+                      <label class="form-check-label" for="skillCheck<?= $index ?>"><?php echo $skill ?></label>
+                    </div>
+                  <?php } ?>  
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col-12">
-                  <label for="levelOfEducation">Level of Education</label>
+                  <label for="levelOfEducation">Present level of Education</label>
                   <select class="form-control" required name="levelOfEducation">
                     <option disabled>What is the highest level of formal education you've received?</option>
                     <?php foreach($levelsOfEducation as $levelOfEducation) { ?>
@@ -166,22 +179,24 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
               </div>
               <div class="row mb-3">
                 <div class="col-12 mb-3">
-                  <label for="bestSubjects">Best subjects</label name="bestSubjects">
-                  <select class="form-control" multiple required>
-                    <option disabled>Which subjects do you excel in and enjoy?</option>
-                    <?php foreach($subjects as $subject) { ?>
-                      <option><?php echo $subject ?></option>
-                    <?php } ?>
-                  </select>
+                  <label for="bestSubjects">Best performing subjects</label>
+                  <small class="text-muted form-text">Which subjects do you excel in and enjoy?</small>
+                  <?php foreach($subjects as $index => $subject) { ?>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="bestSubjectCheck<?= $index ?>" name="bestSubjects">
+                      <label class="form-check-label" for="bestSubjectCheck<?= $index ?>"><?php echo $subject ?></label>
+                    </div>
+                  <?php } ?>
                 </div>
                 <div class="col-12">
                   <label for="dislikedSubjects">Disliked Subjects</label>
-                  <select class="form-control" multiple required name="dislikedSubjects">
-                    <option disabled>Which subjects do you have difficulty with or simply dislike?</option>
-                    <?php foreach($subjects as $subject) { ?>
-                      <option><?php echo $subject ?></option>
-                    <?php } ?>
-                  </select>
+                  <small class="text-muted form-text">Which subjects do you have difficulty with or simply dislike?</small>
+                  <?php foreach($subjects as $index => $subject) { ?>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="dislikedSubjectCheck<?= $index ?>" name="dislikedSubjects">
+                      <label class="form-check-label" for="dislikedSubjectCheck<?= $index ?>"><?php echo $subject ?></label>
+                    </div>
+                  <?php } ?>
                 </div>
               </div>
               <div class="row">
@@ -204,7 +219,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
     <?php else: ?>
     <?php if(isset($POST['completeProfile'])) { ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-      Your profile has being successfully updated!
+      Woot woot! Your profile's complete!
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
