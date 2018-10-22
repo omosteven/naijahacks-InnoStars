@@ -25,7 +25,7 @@ if (!isset($_GET['career'])) {
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#careerHighlights" data-offset="0">
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">Devminds</a>
@@ -53,42 +53,59 @@ if (!isset($_GET['career'])) {
     <div class="container my-3">
       <div class="row">
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-          <div class="card">
+          <div class="card" id="careerInfoCard">
             <img class="card-img-top" src="img/cybersecurity.jpeg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Cyber Security Science</h5>
               <h6 class="card-subtitle mb-2 text-muted">Software and Technology</h6>
-              <p class="card-text">
+              <p class="card-text career-short-desc">
                 Break into computers just like in the movies, except in real life.
                 You'll be protecting yourself and other people from the bad guys by making all the firewalls stronger!
                 Free GUIs included.
               </p>
             </div>
-            <p class="px-3">Suggested based on your likes for:</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Mathematics</li>
-              <li class="list-group-item">Analytical Thinking</li>
-              <li class="list-group-item">Fighting/Defense</li>
-            </ul>
+            <div class="card-suggestion-area">
+              <p class="px-3">Suggested based on your likes for:</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Mathematics</li>
+                <li class="list-group-item">Analytical Thinking</li>
+                <li class="list-group-item">Fighting/Defense</li>
+              </ul>
+            </div>
             <div class="card-body text-right">
               <a href="#" class="text-danger mr-2">Dislike suggestion?</a>
               <a href="#" class="btn btn-primary">Choose career</a>
-            </div>            
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Suggested Mentors</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Get to know the badass people already in the field!</h6>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-8 mb-3 mb-lg-0">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Fellow students</h5>
-              <h6 class="card-subtitle mb-2 text-muted">These guys are similar to you and chose this as their career.</h6>
+              <h5 class="card-title">Career Highlights</h5>
+              <h6 class="card-subtitle mb-2 text-muted">What kind of ride are you in for?</h6>
+            </div>
+            <div class="list-group list-group-flush" id="careerHighlights">
+              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight1" id="careerHighlight1">
+                <h5>Deep dives into computers and what they are.</h5>
+                <p>You'll go beyond the surface of what a computer is and go down to the awesome nitty gritty details.</p>
+                <p>You won't just be using computers but also studying how they work, what makes them tick. What limitations do they face? How do they surpass those limitations?</p>
+                <p>Ex pariatur et id eu cillum veniam ut mollit aliquip sunt consequat. Ut mollit qui cillum ut velit nisi. Et deserunt incididunt elit dolore eu voluptate ut nisi enim commodo aliquip laboris. Qui ea sint quis est consequat ea amet proident id. Eu aliqua pariatur excepteur ex culpa commodo aute. Pariatur consequat dolore laborum ea commodo aliquip anim non enim ipsum esse ad ea.</p>
+              </a>
+              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight2" id="careerHighlight2">
+                <h5>Lorem</h5>
+                <p>Proident nostrud consectetur aliquip eu. Adipisicing sunt sunt veniam sint consectetur velit est. In et do veniam adipisicing excepteur dolor exercitation nulla. Eu magna aliqua ipsum sunt commodo Lorem do in consequat aliqua. Duis aliquip ullamco amet occaecat nisi duis adipisicing aliqua nulla adipisicing ea proident duis. Ea officia ut est mollit sit ut. Consectetur duis aliqua labore et duis incididunt et et esse commodo et dolore aute.</p>
+                <p>Aliqua irure occaecat aliquip quis. Nostrud aliquip duis id eiusmod magna pariatur labore ipsum elit ex duis. Cupidatat occaecat commodo cillum nisi sit voluptate ipsum consequat qui.</p>
+              </a>
+              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight3" id="careerHighlight3">
+                <h5>Lorem</h5>
+                <p>Proident nostrud consectetur aliquip eu. Adipisicing sunt sunt veniam sint consectetur velit est. In et do veniam adipisicing excepteur dolor exercitation nulla. Eu magna aliqua ipsum sunt commodo Lorem do in consequat aliqua. Duis aliquip ullamco amet occaecat nisi duis adipisicing aliqua nulla adipisicing ea proident duis. Ea officia ut est mollit sit ut. Consectetur duis aliqua labore et duis incididunt et et esse commodo et dolore aute.</p>
+                <p>Aliqua irure occaecat aliquip quis. Nostrud aliquip duis id eiusmod magna pariatur labore ipsum elit ex duis. Cupidatat occaecat commodo cillum nisi sit voluptate ipsum consequat qui.</p>
+              </a>
+              <a class="list-group-item list-group-item-action d-flex flex-column w-100" href="#careerHighlight4" id="careerHighlight4">
+                <h5>Lorem</h5>
+                <p>Proident nostrud consectetur aliquip eu. Adipisicing sunt sunt veniam sint consectetur velit est. In et do veniam adipisicing excepteur dolor exercitation nulla. Eu magna aliqua ipsum sunt commodo Lorem do in consequat aliqua. Duis aliquip ullamco amet occaecat nisi duis adipisicing aliqua nulla adipisicing ea proident duis. Ea officia ut est mollit sit ut. Consectetur duis aliqua labore et duis incididunt et et esse commodo et dolore aute.</p>
+                <p>Aliqua irure occaecat aliquip quis. Nostrud aliquip duis id eiusmod magna pariatur labore ipsum elit ex duis. Cupidatat occaecat commodo cillum nisi sit voluptate ipsum consequat qui.</p>
+              </a>
             </div>
           </div>
         </div>
@@ -97,6 +114,32 @@ if (!isset($_GET['career'])) {
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave').one('transitionend', function () { $(this).detach(); }) })</script>
     <script src="js/navbar.js"></script>
+    <script>
+      $(function () {
+        var condensed = false
+        function watchCondense () {
+          var condenseId = setInterval(function () {
+            if ($('html, body').scrollTop() >= 291) {
+                $('#careerInfoCard').addClass('float').addClass('condensed');
+                condensed = true
+                clearInterval(condenseId);
+                setTimeout(function () { watchExpand() });
+              }
+          }, 100);
+        }
+        function watchExpand () {
+          var expandId = setInterval(function () {
+            if ($('html, body').scrollTop() < 291 && condensed) {
+              $('#careerInfoCard').removeClass('float').removeClass('condensed');
+              condensed = false
+              clearInterval(expandId);
+              setTimeout(function () { watchCondense() })
+            }
+          }, 100);
+        }
+        watchCondense();
+      })
+    </script>
     <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
   </body>
 </html>

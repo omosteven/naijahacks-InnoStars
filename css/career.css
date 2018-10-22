@@ -1,0 +1,52 @@
+body {
+  position: relative;
+}
+
+#careerHighlights .list-group-item {
+  transition: background-color .5s, color .5s, box-shadow .5s, border .5s;
+}
+
+#careerHighlights .list-group-item.active {
+  border: none;
+  border-left: 10px solid #007bff;
+  background-color: white;
+  color: #495057;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
+}
+
+#careerHighlights .list-group-item.active:nth-child(2) {
+  border-left: 10px solid rgb(112, 48, 238);
+}
+
+#careerHighlights .list-group-item.active:nth-child(2) {
+  border-left: 10px solid rgb(170, 30, 100);
+}
+#careerHighlights .list-group-item.active:nth-child(3) {
+  border-left: 10px solid rgba(30, 200, 140, .8);
+}
+
+#careerInfoCard {
+  transition: all .5s ease-out;
+}
+@media screen and (min-width: 992px) {
+  #careerInfoCard.float {
+    position: fixed;
+    top: 0;
+    /* left: calc((100vh - 960px) / 2); */
+    width: 250px;
+  }
+  #careerInfoCard.condensed .career-short-desc {
+    display: none;
+  }
+  #careerInfoCard.condensed .card-suggestion-area {
+    display: none;
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  #careerInfoCard.float {
+    /* left: calc((100vh - 1140px) /2 ); */
+  }
+}
