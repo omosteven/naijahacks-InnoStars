@@ -54,10 +54,11 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/overrides.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/animations.css">
     <title>DevMinds Profile</title>
   </head>
   <body>
-    <?php if(!isset($_POST['completeProfile'])): ?>
+    <!-- <?php if(!isset($_POST['completeProfile'])): ?>
     <div id="loader">
       <div id="loader-circle">
         <div></div>
@@ -65,7 +66,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
         <div></div>
         <div></div>
       </div>
-    </div>
+    </div> -->
     <?php endif; ?>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
@@ -225,10 +226,10 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
       </button>
     </div>
     <?php } ?>
-    <div class="container profile">
-      <div class="row">
-        <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-          <div class="card profile-card">
+    <div class="container profile contains-animations">
+      <div class="row scale-in">
+        <div class="col-12 col-lg-4 offset-lg-2 mb-3 mb-lg-0">
+          <div class="card profile-card appear">
             <div class="card-avatar">
               <img src="<?= $profilePicture; ?>" />
             </div>
@@ -241,7 +242,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Gbagada</li>
-              <li class="list-group-item"><i class="far fa-calendar-alt"></i> </li>
+              <li class="list-group-item"><i class="far fa-calendar-alt"></i> 10/02/1998</li>
               <li class="list-group-item"><i class="fas fa-graduation-cap"></i> Undergraduate</li>
             </ul>
             <div class="card-body text-right">
@@ -250,12 +251,12 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
           </div>
         </div>
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-          <div class="card">
+          <div class="card appear">
             <div class="card-body">
               <h5 class="card-title">Suggested Careers</h5>
               <h6 class="card-subtitle mb-2 text-muted">These one seem like a sweet match to your skills and likes!</h6>
             </div>
-            <div class="list-group list-group-flush">
+            <div class="list-group list-group-flush appear">
               <?php foreach($suggestedCareers as $suggestedCareer): ?>
               <a href="career.php?career=<?= urlencode($suggestedCareer); ?>" class="list-group-item list-group-item-action"><?= $suggestedCareer; ?> <i class="float-right fas fa-chevron-right"></i></a>
               <?php endforeach; ?>

@@ -150,3 +150,6 @@ button.overlay-navigation-close span:nth-child(2) {
   max-width: 767px;
   transform: translateX(-50%);
 }
+.card {
+  filter: drop-shadow(0 0 0.15rem rgba(0, 0, 0, .12));
+}

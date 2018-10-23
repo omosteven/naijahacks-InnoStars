@@ -22,6 +22,8 @@ if (!isset($_GET['career'])) {
     <link href="css/overrides.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="css/career.css" rel="stylesheet">
+    <!-- Animations -->
+    <link href="css/animations.css" rel="stylesheet">
 
   </head>
 
@@ -53,7 +55,7 @@ if (!isset($_GET['career'])) {
     <div class="container my-3">
       <div class="row">
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-          <div class="card" id="careerInfoCard">
+          <div class="card appear" id="careerInfoCard">
             <img class="card-img-top" src="img/cybersecurity.jpeg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Cyber Security Science</h5>
@@ -80,12 +82,12 @@ if (!isset($_GET['career'])) {
           </div>
         </div>
         <div class="col-12 col-lg-8 mb-3 mb-lg-0">
-          <div class="card">
+          <div class="card appear">
             <div class="card-body">
               <h5 class="card-title">Career Highlights</h5>
               <h6 class="card-subtitle mb-2 text-muted">What kind of ride are you in for?</h6>
             </div>
-            <div class="list-group list-group-flush" id="careerHighlights">
+            <div class="list-group list-group-flush appear" id="careerHighlights">
               <li class="list-group-item d-flex flex-column w-100">
                 <h5>Deep dives into computers and what they are.</h5>
                 <p>You'll go beyond the surface of what a computer is and go down to the awesome nitty gritty details.</p>
