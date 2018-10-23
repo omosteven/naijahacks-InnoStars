@@ -69,6 +69,7 @@ if (!isset($_GET['career'])) {
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Mathematics</li>
                 <li class="list-group-item">Analytical Thinking</li>
+                <li class="list-group-item">Browsing</li>
                 <li class="list-group-item">Fighting/Defense</li>
               </ul>
             </div>
@@ -90,16 +91,16 @@ if (!isset($_GET['career'])) {
                 <p>You'll go beyond the surface of what a computer is and go down to the awesome nitty gritty details.</p>
               </li>
               <li class="list-group-item d-flex flex-column w-100">
-                <h5>Lorem</h5>
-                <p>Placeholder placeholder placeholder</p>
+                <h5>Studying what's behind the internet.</h5>
+                <p>Cat videos and Emmanuella are the best, but how did those videos get over to you?</p>
               </li>
               <li class="list-group-item d-flex flex-column w-100">
-                <h5>Lorem</h5>
-                <p>Placeholder placeholder placeholder</p>
+                <h5>Dangers lurking everywhere</h5>
+                <p>Everything might seem fine and dandy on the surface, but the rabbit hole goes deep. Who's watching?</p>
               </li>
               <li class="list-group-item d-flex flex-column w-100">
-                <h5>Lorem</h5>
-                <p>Placholder placeholder placeholder</p>
+                <h5>Defense and Attack</h5>
+                <p>Save yourself from dangers and attack first, to eliminate dangers before they hit you, and your friends.</p>
               </li>
             </div>
           </div>
