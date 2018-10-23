@@ -30,7 +30,7 @@ if (!isset($_GET['career'])) {
   <body>
     <?php require_once('sidebar.php'); ?>
     <div class="container my-3">
-      <div class="row">
+      <div class="row appear">
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
           <div class="card appear" id="careerInfoCard">
             <img class="card-img-top" src="img/cybersecurity.jpeg" alt="Card image cap">
@@ -54,7 +54,7 @@ if (!isset($_GET['career'])) {
             </div>
             <div class="card-body text-right career-selection-buttons">
               <a href="#" class="text-danger mr-2">Dislike suggestion?</a>
-              <a href="#" class="btn btn-primary"><i class="fas fa-heart"></i> Choose career</a>
+              <a href="timeline.php" class="btn btn-primary"><i class="fas fa-heart"></i> Choose career</a>
             </div>
           </div>
         </div>
