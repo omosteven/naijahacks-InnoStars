@@ -5,6 +5,12 @@ body {
 .contains-animations {
   perspective: 1000px;
 }
+.overlay-navigation-wrapper .appear  > * {
+  animation: none;
+}
+.overlay-navigation-wrapper.show .appear > * {
+  animation: appear .3s ease-out forwards;
+}
 .appear > *:not(.card-avatar){
   transform: translateY(30%);
   opacity: 0;
