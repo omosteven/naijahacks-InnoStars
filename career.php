@@ -75,9 +75,9 @@ if (!isset($_GET['career'])) {
                 <li class="list-group-item">Fighting/Defense</li>
               </ul>
             </div>
-            <div class="card-body text-right">
+            <div class="card-body text-right career-selection-buttons">
               <a href="#" class="text-danger mr-2">Dislike suggestion?</a>
-              <a href="#" class="btn btn-primary">Choose career</a>
+              <a href="#" class="btn btn-primary"><i class="fas fa-heart"></i> Choose career</a>
             </div>
           </div>
         </div>
