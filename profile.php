@@ -20,7 +20,7 @@ $hometowns = array_map(function ($state) {
 $hometowns = array_flatten($hometowns);
 sort($hometowns);
 $levelsOfEducation = array('Primary School', 'Secondary School', 'Undergraduate');
-$skills = array("Writing", "Handwork", "Sports", "Cooking", "Leadership", "Music", "Organization", "Analytical Thinking", "Programming", "Dancing", "Drawing&Artwork", "Talking", "Fighting/Defense", "Teamwork");
+$skills = array("Writing", "Browsing", "Handwork", "Sports", "Cooking", "Leadership", "Music", "Organization", "Analytical Thinking", "Programming", "Dancing", "Drawing&Artwork", "Talking", "Fighting/Defense", "Teamwork");
 $subjects = array("Mathematics", "English Language", "Chemistry", "Physics", "Biology", "Social Science", "Astrology", "Economics", "Agricultural Science", "Civic Education", "Politics");
 $profilePicture = isset($_COOKIE['profilePicture']) ? $_COOKIE['profilePicture'] : '';
 // HARD CODE ALL THE THINGS!!!
