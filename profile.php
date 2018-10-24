@@ -238,6 +238,9 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
               <a href="career.php?career=<?= urlencode($suggestedCareer); ?>" class="list-group-item list-group-item-action"><?= $suggestedCareer; ?> <i class="float-right fas fa-chevron-right"></i></a>
               <?php endforeach; ?>
             </div>
+            <div class="card-body">
+              <p>Don't like our suggestions? It's alright. <a href="#">You can check out available careers here.</a></p>
+            </div>
           </div>
         </div>
       </div>
