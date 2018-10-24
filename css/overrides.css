@@ -1,3 +1,6 @@
+body {
+  background: #eee;
+}
 .bg-devminds {
   background: black;
 }
@@ -15,7 +18,7 @@
   text-shadow: none;
 }
 .navbar-brand {
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   font-size: 32px;
   letter-spacing: .15rem;
 }
@@ -91,7 +94,7 @@
   /* display: block; */
 }
 body > .container {
-  transform: translateX(0px);
+  /* transform: translateX(0px); */
   transition: transform .5s;
 }
 
@@ -174,4 +177,9 @@ button.overlay-navigation-close span:nth-child(2) {
 }
 .card {
   filter: drop-shadow(0 0 0.15rem rgba(0, 0, 0, .12));
+}
+
+.footer-logo {
+  height: 48px;
+  width: 168px;
 }
