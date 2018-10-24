@@ -239,7 +239,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
               <?php endforeach; ?>
             </div>
             <div class="card-body">
-              <p>Don't like our suggestions? It's alright. <a href="#">You can check out available careers here.</a></p>
+              <p>Don't like our suggestions? It's alright. <a href="careers.php">You can check out available careers here.</a></p>
             </div>
           </div>
         </div>
