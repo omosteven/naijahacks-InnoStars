@@ -81,7 +81,7 @@
   background-color: #242a30 ; /* Black fallback color */
   /* background-color: rgba(0,0,0, 0.9); */
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  transition: 0.25s ease-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   /* display: none; */
   color: white;
 }
@@ -146,6 +146,11 @@ button.overlay-navigation-close span:nth-child(2) {
   width: 100%;
   text-align: center;
   font-size: 1.2rem;
+  display: none;
+}
+
+.overlay-navigation-wrapper.show .overlay-navigation-content {
+  display: block;
 }
 
 .overlay-navigation-content a {

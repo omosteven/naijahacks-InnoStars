@@ -12,12 +12,14 @@
   </div>
 </nav>
 <div class="overlay-navigation-wrapper" id="mainOverlayNav" role="navigation">
-  <div class="overlay-navigation-content">
+  <div class="overlay-navigation-content appear">
     <div class="d-flex w-100 justify-content-center">
       <img src="img/logo_transparent.png" width="39" height="30" class="d-block align-center" alt="">
     </div>
     <div class="appear">
-      <a href="profile.php">Profile</a> <span class="sr-only">(active)</span></li>
+      <a href="profile.php">Profile</a> <span class="sr-only">(active)</span>
+      <a href="timeline.php">Your Timeline</a></li>
+      <a href="careers.php">Careers</a>
     </div>
   </div>
   <div class="overlay-navigation-bottom-content">
