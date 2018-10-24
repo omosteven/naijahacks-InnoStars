@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="img/logo_transparent.png" width="39" height="30" class="d-inline-block align-center" alt="">
-      Devminds
+      DevMinds
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="overlayNav" data-target="#mainOverlayNav" aria-controls="mainOverlayNav" aria-expanded="false" aria-label="Toggle navigation">
       <span></span>
