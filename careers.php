@@ -1,4 +1,7 @@
 <?php
+session_name('devminds');
+session_start();
+require_once('mustlogin.php');
 $careers = array(
   'Cyber Security Science' => array(
     'name' => 'Cyber Security Science',

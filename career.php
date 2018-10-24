@@ -1,7 +1,10 @@
 <?php
+session_name('devminds');
+session_start();
 if (!isset($_GET['career'])) {
   header('Location: profile.php');
 }
+require_once('mustlogin.php');
 ?>
 <!doctype html>
 <html lang="en">

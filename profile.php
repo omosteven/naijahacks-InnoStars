@@ -1,4 +1,6 @@
 <?php
+session_name('devminds');
+session_start();
 function array_flatten($array) {
   $return = array();
   foreach ($array as $key => $value) {
@@ -22,10 +24,10 @@ sort($hometowns);
 $levelsOfEducation = array('Primary School', 'Secondary School', 'Undergraduate');
 $skills = array("Writing", "Browsing", "Handwork", "Sports", "Cooking", "Leadership", "Music", "Organization", "Analytical Thinking", "Programming", "Dancing", "Drawing&Artwork", "Talking", "Fighting/Defense", "Teamwork");
 $subjects = array("Mathematics", "English Language", "Chemistry", "Physics", "Biology", "Social Science", "Astrology", "Economics", "Agricultural Science", "Civic Education", "Politics");
-$profilePicture = isset($_COOKIE['profilePicture']) ? $_COOKIE['profilePicture'] : '';
+$profilePicture = isset($_SESSION['profilePicture']) ? $_SESSION['profilePicture'] : '';
 // HARD CODE ALL THE THINGS!!!
 $completedProfile = false;
-if (isset($_COOKIE['profilePicture'])) {
+if (isset($_SESSION['fullName'])) {
   $completedProfile = true;
 }
 if (isset($_FILES['profilePicture'])) {
@@ -37,7 +39,8 @@ if (isset($_FILES['profilePicture'])) {
   // $file_ext=strtolower(end(explode('.',$_FILES['profilePicture']['name'])));
   move_uploaded_file($file_tmp,"uploads/".$file_name);
   $profilePicture = "uploads/".$file_name;
-  setcookie('profilePicture', $profilePicture, time() + (86400 * 30), "/");
+  // setcookie('profilePicture', $profilePicture, time() + (86400 * 30), "/");
+  $_SESSION['profilePicture'] = $profilePicture;
 }
 $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathematics');
 ?>
@@ -195,7 +198,14 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
       </div>
     </div>
     <?php else: ?>
-    <?php if(isset($POST['completeProfile'])) { ?>
+    <?php if(isset($_POST['completeProfile'])) { 
+      $_SESSION['fullName'] = $_POST['firstName'].' '.$_POST['lastName'];
+      $_SESSION['DOB'] = $_POST['dateOfBirth'];
+      $_SESSION['hometown'] = $_POST['hometown'];
+      $_SESSION['stateOfResidence'] = $_POST['stateOfResidence'];
+      $_SESSION['stateOfOrigin'] = $_POST['stateOfOrigin'];
+      $_SESSION['educationLevel'] = $_POST['levelOfEducation']; 
+    ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       Woot woot! Your profile's complete!
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -218,9 +228,9 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
               </p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Gbagada</li>
-              <li class="list-group-item"><i class="far fa-calendar-alt"></i> 10/02/1998</li>
-              <li class="list-group-item"><i class="fas fa-graduation-cap"></i> Undergraduate</li>
+              <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> <?php if(isset($_SESSION['stateOfResidence'])){ echo $_SESSION['stateOfResidence']; }?></li>
+              <li class="list-group-item"><i class="far fa-calendar-alt"></i> <?php if(isset($_SESSION['DOB'])){ echo $_SESSION['DOB']; }?></li>
+              <li class="list-group-item"><i class="fas fa-graduation-cap"></i> <?php if(isset($_SESSION['educationLevel'])){ echo $_SESSION['educationLevel']; }?></li>
             </ul>
             <div class="card-body text-right">
               <a href="#">Edit Profile</a>
