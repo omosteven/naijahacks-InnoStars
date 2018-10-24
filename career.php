@@ -60,27 +60,67 @@ if (!isset($_GET['career'])) {
         </div>
         <div class="col-12 col-lg-8 mb-3 mb-lg-0">
           <div class="card appear">
-            <div class="card-body">
-              <h5 class="card-title">Career Highlights</h5>
-              <h6 class="card-subtitle mb-2 text-muted">What kind of ride are you in for?</h6>
-            </div>
-            <div class="list-group list-group-flush appear" id="careerHighlights">
-              <li class="list-group-item d-flex flex-column w-100">
-                <h5>Deep dives into computers and what they are.</h5>
-                <p>You'll go beyond the surface of what a computer is and go down to the awesome nitty gritty details.</p>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="highlights-tab" data-toggle="tab" href="#highlights" role="tab" aria-controls="highlights" aria-selected="true">Highlights</a>
               </li>
-              <li class="list-group-item d-flex flex-column w-100">
-                <h5>Studying what's behind the internet.</h5>
-                <p>Cat videos and Emmanuella are the best, but how did those videos get over to you?</p>
+              <li class="nav-item">
+                <a class="nav-link" id="opportunities-tab" data-toggle="tab" href="#opportunities" role="tab" aria-controls="opportunities" aria-selected="false">Opportunities</a>
               </li>
-              <li class="list-group-item d-flex flex-column w-100">
-                <h5>Dangers lurking everywhere</h5>
-                <p>Everything might seem fine and dandy on the surface, but the rabbit hole goes deep. Who's watching?</p>
+              <li class="nav-item">
+                <a class="nav-link" id="mentors-tab" data-toggle="tab" href="#mentors" role="tab" aria-controls="mentors" aria-selected="false">Mentorship</a>
               </li>
-              <li class="list-group-item d-flex flex-column w-100">
-                <h5>Defense and Attack</h5>
-                <p>Save yourself from dangers and attack first, to eliminate dangers before they hit you, and your friends.</p>
-              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active appear" id="highlights" role="tabpanel" aria-labelledby="highlights-tab">
+                <div class="card-body">
+                  <h5 class="card-title">Career Highlights</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">What kind of ride are you in for?</h6>
+                </div>
+                <div class="list-group list-group-flush appear" id="careerHighlights">
+                  <li class="list-group-item d-flex flex-column w-100">
+                    <h5>Deep dives into computers and what they are.</h5>
+                    <p>You'll go beyond the surface of what a computer is and go down to the awesome nitty gritty details.</p>
+                  </li>
+                  <li class="list-group-item d-flex flex-column w-100">
+                    <h5>Studying what's behind the internet.</h5>
+                    <p>Cat videos and Emmanuella are the best, but how did those videos get over to you?</p>
+                  </li>
+                  <li class="list-group-item d-flex flex-column w-100">
+                    <h5>Dangers lurking everywhere</h5>
+                    <p>Everything might seem fine and dandy on the surface, but the rabbit hole goes deep. Who's watching?</p>
+                  </li>
+                  <li class="list-group-item d-flex flex-column w-100">
+                    <h5>Defense and Attack</h5>
+                    <p>Save yourself from dangers and attack first, to eliminate dangers before they hit you, and your friends.</p>
+                  </li>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="opportunities" role="tabpanel" aria-labelledby="opportunities-tab">
+                <div class="card-body">
+                  <h5 class="card-title">Career Opportunities</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Which kinda awesome jobs can you get / create if you go for this career?</h6>
+                </div>
+                <div class="list-group list-group-flush appear">
+                  <div class="list-group-item d-flex flex-column w-100">
+                    <h5>Ethical Hacker</h5>
+                    <p>Be the coolest one there is, protect your company's servers and software from the bad guys.</p>
+                  </div>
+                  <div class="list-group-item d-flex flex-column w-100">
+                    <h5></h5>
+                    <p></p>
+                  </div>
+                  <div class="list-group-item d-flex flex-column w-100">
+                    <h5></h5>
+                    <p></p>
+                  </div>
+                  <div class="list-group-item d-flex flex-column w-100">
+                    <h5></h5>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="mentors" role="tabpanel" aria-labelledby="mentors-tab">...</div>
             </div>
           </div>
         </div>
