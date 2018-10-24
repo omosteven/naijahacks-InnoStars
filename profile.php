@@ -231,7 +231,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
           <div class="card appear">
             <div class="card-body">
               <h5 class="card-title">Suggested Careers</h5>
-              <h6 class="card-subtitle mb-2 text-muted">These one seem like a sweet match to your skills and likes!</h6>
+              <h6 class="card-subtitle mb-2 text-muted">These ones seem like a sweet match to your skills and likes!</h6>
             </div>
             <div class="list-group list-group-flush appear">
               <?php foreach($suggestedCareers as $suggestedCareer): ?>
