@@ -246,6 +246,7 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
       </div>
     </div>
     <?php endif; ?>
+    <?php require_once('footer.php'); ?>
 
     <!-- Optional JavaScript -->
     <script src="js/vendor/jquery-3.3.1.min.js"></script>

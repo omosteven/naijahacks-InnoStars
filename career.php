@@ -30,7 +30,7 @@ if (!isset($_GET['career'])) {
   <body>
     <?php require_once('sidebar.php'); ?>
     <div class="container my-3">
-      <div class="row appear">
+      <div class="row">
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
           <div class="card appear" id="careerInfoCard">
             <img class="card-img-top" src="img/cybersecurity.jpeg" alt="Card image cap">
@@ -125,6 +125,8 @@ if (!isset($_GET['career'])) {
           </div>
         </div>
       </div>
+    </div>
+    <?php require_once('footer.php'); ?>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave').one('transitionend', function () { $(this).detach(); }) })</script>
@@ -136,6 +138,7 @@ if (!isset($_GET['career'])) {
           var condenseId = setInterval(function () {
             if ($('html, body').scrollTop() >= 291) {
                 $('#careerInfoCard').addClass('float').addClass('condensed');
+                $('body').addClass('hasCardCondensed');
                 condensed = true
                 clearInterval(condenseId);
                 setTimeout(function () { watchExpand() });
@@ -146,6 +149,7 @@ if (!isset($_GET['career'])) {
           var expandId = setInterval(function () {
             if ($('html, body').scrollTop() < 291 && condensed) {
               $('#careerInfoCard').removeClass('float').removeClass('condensed');
+              $('body').removeClass('hasCardCondensed');
               condensed = false
               clearInterval(expandId);
               setTimeout(function () { watchCondense() })

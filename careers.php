@@ -85,6 +85,7 @@ if ($searchQuery !== '') {
       </div>
     </div>
   </div>
+  <?php require_once('footer.php'); ?>
   <script src="js/vendor/jquery-3.3.1.min.js"></script>
   <script src="js/vendor/bootstrap.bundle.min.js"></script>
   <script>$(window).on('DOMContentLoaded', function () { $('#loader').addClass('leave').one('transitionend', function () { $(this).detach(); }) })</script>
