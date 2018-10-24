@@ -59,7 +59,13 @@ body {
   }
 }
 
+body.hasCardCondensed {
+  min-height: 150vh !important;
+}
 
+body.hasCardCondensed footer {
+  margin-top: 30vh !important;
+}
 
 @media screen and (min-width: 1200px) {
   #careerInfoCard.float {
