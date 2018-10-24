@@ -58,8 +58,8 @@ $suggestedCareers = array('Cyber Security Science', 'Computer Science', 'Mathema
     <title>DevMinds Profile</title>
   </head>
   <body>
-    <!-- <?php if(!isset($_POST['completeProfile'])): ?>
-    <div id="loader">
+    <?php if(!isset($_POST['completeProfile'])): ?>
+    <!-- <div id="loader">
       <div id="loader-circle">
         <div></div>
         <div></div>

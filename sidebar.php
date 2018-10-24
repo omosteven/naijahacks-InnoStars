@@ -13,12 +13,12 @@
 </nav>
 <div class="overlay-navigation-wrapper" id="mainOverlayNav" role="navigation">
   <div class="overlay-navigation-content">
-      <div class="d-flex w-100 justify-content-center">
-        <img src="img/logo_transparent.png" width="39" height="30" class="d-block align-center" alt="">
-      </div>
-      <div class="appear">
-        <a href="profile.php">Profile</a> <span class="sr-only">(active)</span></li>
-      </div>
+    <div class="d-flex w-100 justify-content-center">
+      <img src="img/logo_transparent.png" width="39" height="30" class="d-block align-center" alt="">
+    </div>
+    <div class="appear">
+      <a href="profile.php">Profile</a> <span class="sr-only">(active)</span></li>
+    </div>
   </div>
   <div class="overlay-navigation-bottom-content">
     <div class="row no-gutters">
