@@ -6,6 +6,10 @@ Team Members
   1. Omole-Adebomi Steven, omosteven123@gmail.com
   2. Oluwadare Taye Adelusi, taiwoadelusi@gmail.com
   3. Akinyemi Victor Temiloluwa, rektwrekter@gmail.com
+
+  4. Simeon Omole-Adebomi, contact@oxycrown.com
+
+
 ### Section
 Education
 
